@@ -1,0 +1,150 @@
+.fourth-page {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
+  background: #e8e8e8;
+  color: #2a2a2a;
+  padding: calc(2.5rem + env(safe-area-inset-top, 0px))
+    calc(1.5rem + env(safe-area-inset-right, 0px))
+    calc(5rem + env(safe-area-inset-bottom, 0px))
+    calc(1.5rem + env(safe-area-inset-left, 0px));
+  text-align: center;
+}
+
+.fourth-page__title {
+  margin: 0 0 1.5rem;
+  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.7rem, 7vw, 2.25rem);
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+}
+
+.fourth-page__text {
+  margin: 0 auto 2rem;
+  max-width: 340px;
+  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(0.95rem, 3.8vw, 1.05rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.65;
+}
+
+.fourth-page__divider {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 2rem;
+  line-height: 0;
+}
+
+.fourth-page__divider-img {
+  display: block;
+  width: min(200px, 55vw);
+  height: auto;
+  object-fit: contain;
+}
+
+.fourth-page__calendar {
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+.fourth-page__month {
+  margin: 0 0 1.25rem;
+  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.4rem, 5.5vw, 1.65rem);
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.06em;
+}
+
+.fourth-page__weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.fourth-page__weekday {
+  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(0.8rem, 3vw, 0.9rem);
+  font-weight: 400;
+}
+
+.fourth-page__days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.35rem 0.25rem;
+}
+
+.fourth-page__day {
+  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+  font-weight: 400;
+  line-height: 1.6;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fourth-page__day--empty {
+  visibility: hidden;
+}
+
+.fourth-page__day--wedding {
+  position: relative;
+  background: none;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.fourth-page__heart {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  animation: wedding-heart-pulse 2s ease-in-out infinite;
+}
+
+@keyframes wedding-heart-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fourth-page__heart {
+    animation: none;
+  }
+}
+
+.fourth-page__day-number {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e11d48;
+  font-weight: 500;
+  font-size: clamp(0.8rem, 3vw, 0.95rem);
+  pointer-events: none;
+}
+
+@media (max-width: 375px) {
+  .fourth-page {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .fourth-page__text {
+    max-width: 300px;
+  }
+}

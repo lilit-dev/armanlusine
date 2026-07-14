@@ -1,0 +1,16 @@
+.image-reveal {
+  opacity: 0;
+  transition: opacity 0.9s ease;
+  transition-delay: var(--image-reveal-delay, 0ms);
+}
+
+.image-reveal--visible {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image-reveal {
+    opacity: 1;
+    transition: none;
+  }
+}

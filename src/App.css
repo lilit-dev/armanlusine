@@ -1,0 +1,6 @@
+.app {
+  width: 100%;
+  background: #e8e8e8;
+  overflow-x: hidden;
+  scroll-padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+}

@@ -1,0 +1,158 @@
+.fifth-page {
+  width: 100%;
+  min-height: auto;
+  background: #e8e8e8;
+  color: #2a2a2a;
+  padding: calc(2rem + env(safe-area-inset-top, 0px))
+    calc(1.25rem + env(safe-area-inset-right, 0px))
+    calc(5rem + env(safe-area-inset-bottom, 0px))
+    calc(1.25rem + env(safe-area-inset-left, 0px));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fifth-page__collage {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  height: clamp(340px, 58dvh, 460px);
+  margin-bottom: 2.25rem;
+}
+
+.fifth-page__photo {
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  filter: grayscale(100%);
+}
+
+.fifth-page__photo--center {
+  left: 50%;
+  top: 50%;
+  width: 54%;
+  aspect-ratio: 3 / 4;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.fifth-page__photo--left {
+  left: 0;
+  bottom: 4%;
+  width: 40%;
+  aspect-ratio: 3 / 4;
+  z-index: 2;
+}
+
+.fifth-page__photo--right {
+  right: 0;
+  top: 2%;
+  width: 38%;
+  aspect-ratio: 3 / 4;
+  z-index: 2;
+}
+
+.fifth-page__title {
+  margin: 0 0 2rem;
+  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.7rem, 7vw, 2.25rem);
+  font-weight: 600;
+  font-style: italic;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.fifth-page__program {
+  width: 100%;
+  max-width: 340px;
+}
+
+.fifth-page__event {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.fifth-page__icon-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 88px;
+}
+
+.fifth-page__icon {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  opacity: 0.88;
+  filter: contrast(0.9);
+}
+
+.fifth-page__connector {
+  width: 0.5px;
+  flex: 1;
+  min-height: 2.75rem;
+  margin: 0.6rem 0;
+  background: #2a2a2a;
+  opacity: 0.7;
+}
+
+.fifth-page__event-info {
+  padding-top: 0.25rem;
+  text-align: left;
+}
+
+.fifth-page__event-title {
+  margin: 0 0 0.5rem;
+  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(0.9rem, 3.7vw, 1rem);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.35;
+}
+
+.fifth-page__event-location {
+  margin: 0 0 0.35rem;
+  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(0.95rem, 3.8vw, 1.05rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.fifth-page__event-time {
+  margin: 0;
+  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(0.95rem, 3.8vw, 1.05rem);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+@media (max-height: 700px) {
+  .fifth-page__collage {
+    height: clamp(280px, 50dvh, 380px);
+    margin-bottom: 1.75rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .fifth-page__collage {
+    max-width: 310px;
+    height: clamp(320px, 55dvh, 420px);
+  }
+
+  .fifth-page__photo--center {
+    width: 56%;
+  }
+
+  .fifth-page__photo--left {
+    width: 42%;
+  }
+
+  .fifth-page__photo--right {
+    width: 40%;
+  }
+}

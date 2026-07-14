@@ -1,0 +1,128 @@
+.second-page {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #e8e8e8;
+  color: #3a3a3a;
+  padding: calc(2.5rem + env(safe-area-inset-top, 0px))
+    calc(1.25rem + env(safe-area-inset-right, 0px))
+    calc(5rem + env(safe-area-inset-bottom, 0px))
+    calc(1.25rem + env(safe-area-inset-left, 0px));
+}
+
+.second-page__countdown {
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.second-page__title {
+  margin: 0 0 1.75rem;
+  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.45rem, 5.8vw, 1.8rem);
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.06em;
+}
+
+.second-page__timer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.second-page__timer-col {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+.second-page__timer-divider {
+  position: absolute;
+  left: 0;
+  top: 0.15rem;
+  width: 1px;
+  height: 2.5rem;
+  background: #3a3a3a;
+}
+
+.second-page__timer-value {
+  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.75rem, 8vw, 2.25rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.second-page__timer-label {
+  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(0.85rem, 3.5vw, 1rem);
+  font-weight: 400;
+  font-style: italic;
+}
+
+.second-page__card {
+  width: 100%;
+  max-width: 320px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.25rem 1.25rem 1.75rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.second-page__card-image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4px;
+  filter: grayscale(100%);
+  margin-bottom: 1.25rem;
+}
+
+.second-page__quote {
+  margin: 0 0 0.5rem;
+  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1rem, 4vw, 1.125rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.second-page__reference {
+  margin: 0;
+  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(0.9rem, 3.5vw, 1rem);
+  font-weight: 400;
+  font-style: italic;
+}
+
+@media (max-width: 390px) {
+  .second-page__timer-value {
+    font-size: clamp(1.55rem, 7.5vw, 2rem);
+  }
+
+  .second-page__timer-col {
+    padding: 0 0.2rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .second-page {
+    padding-top: calc(2rem + env(safe-area-inset-top, 0px));
+  }
+
+  .second-page__timer-col {
+    padding: 0 0.25rem;
+  }
+}
