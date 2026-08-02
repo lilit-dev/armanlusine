@@ -1,8 +1,7 @@
-import ImageReveal from '../ImageReveal/ImageReveal'
 import './FifthPage.css'
 
-const CENTER_IMAGE = encodeURI('/images/hraviratoms 8.webp')
-const LEFT_IMAGE = encodeURI('/images/hraviratoms 8.1.webp')
+const CENTER_IMAGE = encodeURI('/images/hraviratoms8.12.webp')
+const LEFT_IMAGE = encodeURI('/images/hraviratoms8.11 (2).webp')
 const RIGHT_IMAGE = encodeURI('/images/hraviratoms8.5.webp')
 
 const PROGRAM = [
@@ -26,22 +25,20 @@ export default function FifthPage() {
   return (
     <section className="fifth-page">
       <div className="fifth-page__collage">
-        <ImageReveal
+        <img
           className="fifth-page__photo fifth-page__photo--center"
           src={CENTER_IMAGE}
           alt="Arman և Lusine"
-          delay={200}
         />
-        <ImageReveal
+        <img
           className="fifth-page__photo fifth-page__photo--left"
           src={LEFT_IMAGE}
           alt="Arman և Lusine"
         />
-        <ImageReveal
+        <img
           className="fifth-page__photo fifth-page__photo--right"
           src={RIGHT_IMAGE}
           alt="Arman և Lusine"
-          delay={120}
         />
       </div>
 

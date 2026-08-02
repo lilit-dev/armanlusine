@@ -4,3 +4,30 @@
   overflow-x: hidden;
   scroll-padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
 }
+
+@media (max-width: 768px) {
+  .app > section:not(.third-page):not(.fourth-page):not(.fifth-page):not(.sixth-page):not(.seventh-page) {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    min-height: 100dvh;
+    min-height: 100svh;
+    box-sizing: border-box;
+  }
+
+  .app > .third-page,
+  .app > .fourth-page,
+  .app > .fifth-page,
+  .app > .sixth-page,
+  .app > .seventh-page,
+  .app > footer {
+    scroll-snap-align: none;
+    scroll-snap-stop: normal;
+    min-height: auto;
+    box-sizing: border-box;
+  }
+
+  .app > .third-page {
+    min-height: 100dvh;
+    min-height: 100svh;
+  }
+}

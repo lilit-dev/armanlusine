@@ -1,5 +1,4 @@
 import { MapPin } from '../../icons'
-import ImageReveal from '../ImageReveal/ImageReveal'
 import './SixthPage.css'
 
 const LOCATIONS = [
@@ -18,15 +17,14 @@ const LOCATIONS = [
 export default function SixthPage() {
   return (
     <section className="sixth-page">
-      {LOCATIONS.map((location, index) => (
+      {LOCATIONS.map((location) => (
         <article key={location.title} className="sixth-page__location">
           <h2 className="sixth-page__title">{location.title}</h2>
 
-          <ImageReveal
+          <img
             className="sixth-page__illustration"
             src={location.image}
             alt={location.title}
-            delay={index * 150}
           />
 
           <a

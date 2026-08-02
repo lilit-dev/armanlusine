@@ -1,30 +1,34 @@
 .second-page {
   width: 100%;
-  min-height: 100vh;
-  min-height: 100svh;
+  height: 100vh;
+  height: 100svh;
+  height: 100dvh;
   min-height: 100dvh;
+  max-height: 100dvh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background: #e8e8e8;
   color: #3a3a3a;
-  padding: calc(2.5rem + env(safe-area-inset-top, 0px))
-    calc(1.25rem + env(safe-area-inset-right, 0px))
-    calc(5rem + env(safe-area-inset-bottom, 0px))
-    calc(1.25rem + env(safe-area-inset-left, 0px));
+  padding: calc(var(--page-padding-top) + env(safe-area-inset-top, 0px))
+    calc(var(--page-padding-x) + env(safe-area-inset-right, 0px))
+    calc(var(--page-padding-bottom) + env(safe-area-inset-bottom, 0px))
+    calc(var(--page-padding-x) + env(safe-area-inset-left, 0px));
 }
 
 .second-page__countdown {
   width: 100%;
   max-width: 360px;
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: var(--space-xl);
 }
 
 .second-page__title {
-  margin: 0 0 1.75rem;
+  margin: 0 0 var(--space-lg);
   font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(1.45rem, 5.8vw, 1.8rem);
+  font-size: var(--heading-font-size);
   font-weight: 600;
   font-style: italic;
   letter-spacing: 0.06em;
@@ -65,19 +69,22 @@
 
 .second-page__timer-label {
   font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(0.85rem, 3.5vw, 1rem);
+  font-size: var(--text-font-size);
   font-weight: 400;
   font-style: italic;
 }
 
 .second-page__card {
   width: 100%;
-  max-width: 320px;
+  max-width: 340px;
   background: #ffffff;
   border-radius: 16px;
-  padding: 1.25rem 1.25rem 1.75rem;
+  padding: var(--card-padding);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-gap);
 }
 
 .second-page__card-image {
@@ -87,24 +94,28 @@
   object-position: center;
   border-radius: 4px;
   filter: grayscale(100%);
-  margin-bottom: 1.25rem;
+  margin: 0;
 }
 
 .second-page__quote {
-  margin: 0 0 0.5rem;
+  margin: 0;
   font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(1rem, 4vw, 1.125rem);
+  font-size: var(--text-font-size);
   font-weight: 400;
   font-style: italic;
-  line-height: 1.5;
+  line-height: 1.65;
+  color: #2a2a2a;
 }
 
 .second-page__reference {
   margin: 0;
   font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(0.9rem, 3.5vw, 1rem);
+  font-size: var(--text-font-size);
   font-weight: 400;
   font-style: italic;
+  line-height: 1.65;
+  color: #2a2a2a;
+  opacity: 0.85;
 }
 
 @media (max-width: 390px) {
@@ -118,10 +129,6 @@
 }
 
 @media (max-width: 375px) {
-  .second-page {
-    padding-top: calc(2rem + env(safe-area-inset-top, 0px));
-  }
-
   .second-page__timer-col {
     padding: 0 0.25rem;
   }

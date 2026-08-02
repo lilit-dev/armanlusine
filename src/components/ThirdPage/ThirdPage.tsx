@@ -1,10 +1,8 @@
-import ImageReveal from '../ImageReveal/ImageReveal'
 import './ThirdPage.css'
 
 const PHOTOS = [
-  encodeURI('/images/hraviratoms 8.webp'),
-  encodeURI('/images/hraviratoms8.4.webp'),
-  encodeURI('/images/hraviratoms8.7.webp'),
+  encodeURI('/images/hraviratoms8.10.webp'),
+  encodeURI('/images/hraviratoms8.11 (2).webp'),
 ]
 
 export default function ThirdPage() {
@@ -20,11 +18,10 @@ export default function ThirdPage() {
 
       <div className="third-page__photos-col">
         {PHOTOS.map((src, index) => (
-          <ImageReveal
+          <img
             key={src}
-            delay={index * 120}
             className={`third-page__photo${
-              index === 0 ? ' third-page__photo--first' : index === 1 ? ' third-page__photo--second' : ' third-page__photo--last'
+              index === 0 ? ' third-page__photo--first' : ' third-page__photo--second'
             }`}
             src={src}
             alt={`Arman և Lusine ${index + 1}`}

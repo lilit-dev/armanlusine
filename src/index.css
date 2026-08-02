@@ -1,3 +1,32 @@
+:root {
+  --page-padding-x: 1.25rem;
+  --page-padding-top: 2rem;
+  --page-padding-bottom: 3.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.25rem;
+  --space-xl: 1.5rem;
+  --card-padding: 1.25rem;
+  --card-gap: 1.25rem;
+  --stack-gap: 1.25rem;
+  --motion-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --heading-font-size: clamp(1.6rem, 6.5vw, 2.15rem);
+  --text-font-size: clamp(0.95rem, 3.8vw, 1.05rem);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --page-padding-top: 1.5rem;
+    --space-lg: 1rem;
+    --space-xl: 1.25rem;
+    --card-padding: 1rem;
+    --card-gap: 1rem;
+    --stack-gap: 1rem;
+    --heading-font-size: clamp(1.45rem, 6vw, 1.75rem);
+    --text-font-size: clamp(0.9rem, 3.5vw, 1rem);
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -9,9 +38,26 @@ html {
   text-size-adjust: 100%;
 }
 
+@media (max-width: 768px) {
+  html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    height: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+}
+
 body {
   margin: 0;
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: var(--text-font-size);
   background: #e8e8e8;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;

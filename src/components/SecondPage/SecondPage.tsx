@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import ImageReveal from '../ImageReveal/ImageReveal'
 import './SecondPage.css'
 
 const WEDDING_DATE = new Date('2026-08-16T12:00:00')
@@ -63,7 +62,7 @@ export default function SecondPage() {
       </div>
 
       <article className="second-page__card">
-        <ImageReveal
+        <img
           className="second-page__card-image"
           src={QUOTE_IMAGE}
           alt="Մատանին"

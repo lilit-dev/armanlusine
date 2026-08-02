@@ -1,47 +1,60 @@
 .fourth-page {
   width: 100%;
-  min-height: 100vh;
-  min-height: 100svh;
-  min-height: 100dvh;
+  min-height: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background: #e8e8e8;
   color: #2a2a2a;
-  padding: calc(2.5rem + env(safe-area-inset-top, 0px))
-    calc(1.5rem + env(safe-area-inset-right, 0px))
-    calc(5rem + env(safe-area-inset-bottom, 0px))
-    calc(1.5rem + env(safe-area-inset-left, 0px));
+  padding: calc(var(--page-padding-top) + env(safe-area-inset-top, 0px))
+    calc(var(--page-padding-x) + env(safe-area-inset-right, 0px))
+    calc(var(--page-padding-bottom) + env(safe-area-inset-bottom, 0px))
+    calc(var(--page-padding-x) + env(safe-area-inset-left, 0px));
   text-align: center;
+  box-sizing: border-box;
 }
 
 .fourth-page__title {
-  margin: 0 0 1.5rem;
+  margin: 0 0 var(--space-lg);
+  width: 100%;
+  max-width: 340px;
   font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(1.7rem, 7vw, 2.25rem);
+  font-size: var(--heading-font-size);
   font-weight: 600;
   font-style: italic;
   line-height: 1.3;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
+  text-wrap: balance;
 }
 
 .fourth-page__text {
-  margin: 0 auto 2rem;
+  margin: 0 auto var(--space-lg);
+  width: 100%;
   max-width: 340px;
   font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(0.95rem, 3.8vw, 1.05rem);
+  font-size: var(--text-font-size);
   font-weight: 400;
   font-style: italic;
   line-height: 1.65;
+  color: #2a2a2a;
+  hyphens: none;
+  word-break: normal;
+  overflow-wrap: normal;
+  text-wrap: pretty;
 }
 
 .fourth-page__divider {
   display: flex;
   justify-content: center;
-  margin: 0 0 2rem;
+  margin: 0 0 var(--space-lg);
   line-height: 0;
 }
 
 .fourth-page__divider-img {
   display: block;
-  width: min(200px, 55vw);
+  width: min(120px, 34vw);
   height: auto;
   object-fit: contain;
 }
@@ -52,9 +65,9 @@
 }
 
 .fourth-page__month {
-  margin: 0 0 1.25rem;
+  margin: 0 0 var(--space-lg);
   font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(1.4rem, 5.5vw, 1.65rem);
+  font-size: var(--heading-font-size);
   font-weight: 600;
   font-style: italic;
   letter-spacing: 0.06em;
@@ -69,7 +82,7 @@
 
 .fourth-page__weekday {
   font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(0.8rem, 3vw, 0.9rem);
+  font-size: var(--text-font-size);
   font-weight: 400;
 }
 
@@ -81,7 +94,7 @@
 
 .fourth-page__day {
   font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(0.95rem, 3.5vw, 1.1rem);
+  font-size: var(--text-font-size);
   font-weight: 400;
   line-height: 1.6;
   aspect-ratio: 1;
@@ -106,7 +119,8 @@
   height: 100%;
   max-width: none;
   object-fit: contain;
-  animation: wedding-heart-pulse 2s ease-in-out infinite;
+  animation: wedding-heart-pulse 2.2s ease-in-out infinite;
+  transform-origin: center center;
 }
 
 @keyframes wedding-heart-pulse {
@@ -116,7 +130,7 @@
   }
 
   50% {
-    transform: scale(1.1);
+    transform: scale(1.12);
   }
 }
 
@@ -134,17 +148,35 @@
   justify-content: center;
   color: #e11d48;
   font-weight: 500;
-  font-size: clamp(0.8rem, 3vw, 0.95rem);
+  font-size: var(--text-font-size);
   pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .fourth-page {
+    justify-content: flex-start;
+  }
+
+  .fourth-page__text {
+    line-height: 1.6;
+  }
+
+  .fourth-page__weekdays {
+    margin-bottom: var(--space-sm);
+  }
+
+  .fourth-page__days {
+    gap: 0.25rem 0.2rem;
+  }
 }
 
 @media (max-width: 375px) {
   .fourth-page {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding-left: var(--page-padding-x);
+    padding-right: var(--page-padding-x);
   }
 
   .fourth-page__text {
-    max-width: 300px;
+    max-width: 320px;
   }
 }
