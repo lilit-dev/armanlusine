@@ -12,16 +12,16 @@ export default function MusicPlayer() {
     const audio = audioRef.current
     if (!audio) return
 
-    audio.muted = false
-    audio.volume = 1
-
     const start = () => {
       if (!audio.paused) return
+      if (!audio.getAttribute('src')) audio.src = WEDDING_MUSIC
+      audio.muted = false
+      audio.volume = 1
       void audio.play().catch(() => {})
     }
 
-    start()
-    const retry = window.setTimeout(start, 300)
+    if (document.readyState === 'complete') start()
+    else window.addEventListener('load', start, { once: true })
 
     const onGesture = (event: Event) => {
       const target = event.target
@@ -34,7 +34,7 @@ export default function MusicPlayer() {
     audio.addEventListener('playing', onPlaying)
 
     return () => {
-      window.clearTimeout(retry)
+      window.removeEventListener('load', start)
       window.removeEventListener('pointerdown', onGesture)
       audio.removeEventListener('playing', onPlaying)
     }
@@ -69,9 +69,7 @@ export default function MusicPlayer() {
 
       <audio
         ref={audioRef}
-        src={WEDDING_MUSIC}
-        preload="auto"
-        autoPlay
+        preload="none"
         loop
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
