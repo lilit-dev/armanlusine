@@ -80,9 +80,13 @@ export default function FourthPage() {
 
           className="fourth-page__divider-img"
 
-          src="/svg/bajakner.png?v=3"
+          src="/svg/bajakner.webp"
 
           alt=""
+
+          loading="lazy"
+
+          decoding="async"
 
         />
 
@@ -131,6 +135,10 @@ export default function FourthPage() {
                     alt=""
 
                     aria-hidden
+
+                    loading="lazy"
+
+                    decoding="async"
 
                   />
 

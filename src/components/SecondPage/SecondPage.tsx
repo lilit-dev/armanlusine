@@ -66,6 +66,8 @@ export default function SecondPage() {
           className="second-page__card-image"
           src={QUOTE_IMAGE}
           alt="Մատանիներ"
+          loading="lazy"
+          decoding="async"
         />
         <p className="second-page__quote">
           Սերը հանդուրժող է,

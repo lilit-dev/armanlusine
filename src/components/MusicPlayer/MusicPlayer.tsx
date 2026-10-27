@@ -12,15 +12,13 @@ export default function MusicPlayer() {
     const audio = audioRef.current
     if (!audio) return
 
-    if (isPlaying) {
+    if (!audio.paused) {
       audio.pause()
-      setIsPlaying(false)
       return
     }
 
     try {
       await audio.play()
-      setIsPlaying(true)
     } catch {
       setIsPlaying(false)
     }
@@ -34,14 +32,17 @@ export default function MusicPlayer() {
         onClick={toggleMusic}
         aria-label={isPlaying ? 'Դադարեցնել երաժշտությունը' : 'Նվագարկել երաժշտությունը'}
       >
-        {isPlaying ? <VolumeX size={22} /> : <Music size={22} />}
+        {isPlaying ? <Music size={22} /> : <VolumeX size={22} />}
       </button>
 
       <audio
         ref={audioRef}
         src={WEDDING_MUSIC}
+        preload="auto"
+        autoPlay
         loop
-        onEnded={() => setIsPlaying(false)}
+        onPlay={() => setIsPlaying(true)}
+        onPause={() => setIsPlaying(false)}
       />
     </>
   )

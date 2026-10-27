@@ -22,7 +22,7 @@ export default function FirstPage() {
 
           <span className="first-page__amp">և</span>
 
-          <span className="first-page__name">Թամարա</span>
+          <span className="first-page__name">Թամարիկ</span>
 
         </h1>
 

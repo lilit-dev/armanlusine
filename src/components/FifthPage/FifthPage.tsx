@@ -6,13 +6,13 @@ const RIGHT_IMAGE = '/images/gagik-tamarik-2.webp'
 
 const PROGRAM = [
   {
-    icon: '/svg/pesa.png?v=3',
+    icon: '/svg/pesa.webp',
     title: 'ՓԵՍԱՅԻ ՏՈՒՆ',
     time: '11:00',
     hasLine: true,
   },
   {
-    icon: '/svg/hars.png?v=2',
+    icon: '/svg/hars.webp',
     title: 'ՀԱՐՍԻ ՏՈՒՆ',
     time: '13:00',
     hasLine: true,
@@ -40,17 +40,23 @@ export default function FifthPage() {
         <img
           className="fifth-page__photo fifth-page__photo--center"
           src={CENTER_IMAGE}
-          alt="Գագիկ և Թամարա"
+          alt="Գագիկ և Թամարիկ"
+          loading="lazy"
+          decoding="async"
         />
         <img
           className="fifth-page__photo fifth-page__photo--left"
           src={LEFT_IMAGE}
-          alt="Գագիկ և Թամարա"
+          alt="Գագիկ և Թամարիկ"
+          loading="lazy"
+          decoding="async"
         />
         <img
           className="fifth-page__photo fifth-page__photo--right"
           src={RIGHT_IMAGE}
-          alt="Գագիկ և Թամարա"
+          alt="Գագիկ և Թամարիկ"
+          loading="lazy"
+          decoding="async"
         />
       </div>
 
@@ -60,7 +66,14 @@ export default function FifthPage() {
         {PROGRAM.map((event) => (
           <article key={event.title} className="fifth-page__event">
             <div className="fifth-page__icon-col">
-              <img className="fifth-page__icon" src={event.icon} alt="" aria-hidden />
+              <img
+                className="fifth-page__icon"
+                src={event.icon}
+                alt=""
+                aria-hidden
+                loading="lazy"
+                decoding="async"
+              />
               {event.hasLine && <span className="fifth-page__connector" aria-hidden />}
             </div>
             <div className="fifth-page__event-info">

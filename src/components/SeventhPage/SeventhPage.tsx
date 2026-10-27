@@ -14,7 +14,9 @@ export default function SeventhPage() {
         <img
           className="seventh-page__photo"
           src={DETAILS_IMAGE}
-          alt="Գագիկ և Թամարա"
+          alt="Գագիկ և Թամարիկ"
+          loading="lazy"
+          decoding="async"
         />
 
         <p className="seventh-page__text">
