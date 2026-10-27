@@ -4,6 +4,45 @@ import './MusicPlayer.css'
 
 const WEDDING_MUSIC = '/audio/ordinary-wedding.mp3'
 
+const PAGE_IMAGES = [
+  '/images/dzerqer.webp',
+  '/images/ser-liqy-ser.webp',
+  '/images/gagik-tamarik-2.webp',
+  '/images/gagik-tamarik-3.webp',
+  '/images/gagik-tamarik-4.webp',
+  '/svg/bajakner.webp',
+  '/svg/heart5.svg',
+  '/svg/pesa.webp',
+  '/svg/hars.webp',
+  '/svg/ring1.svg',
+  '/svg/cup5clean.svg',
+  '/svg/kecharis.webp',
+  '/svg/srah.webp',
+]
+
+let pagesReady: Promise<void> | null = null
+
+function whenPagesReady() {
+  if (!pagesReady) {
+    const images = Promise.all(
+      PAGE_IMAGES.map(
+        (src) =>
+          new Promise<void>((resolve) => {
+            const img = new Image()
+            img.onload = () => resolve()
+            img.onerror = () => resolve()
+            img.src = src
+          }),
+      ),
+    )
+    pagesReady = Promise.race([
+      images.then(() => undefined),
+      new Promise<void>((resolve) => window.setTimeout(resolve, 4000)),
+    ])
+  }
+  return pagesReady
+}
+
 export default function MusicPlayer() {
   const audioRef = useRef<HTMLAudioElement>(null)
   const [isPlaying, setIsPlaying] = useState(false)
@@ -12,31 +51,26 @@ export default function MusicPlayer() {
     const audio = audioRef.current
     if (!audio) return
 
+    let cancelled = false
+
     const start = () => {
-      if (!audio.paused) return
+      if (cancelled || !audio.paused) return
       if (!audio.getAttribute('src')) audio.src = WEDDING_MUSIC
       audio.muted = false
       audio.volume = 1
       void audio.play().catch(() => {})
     }
 
-    if (document.readyState === 'complete') start()
-    else window.addEventListener('load', start, { once: true })
-
-    const onGesture = (event: Event) => {
-      const target = event.target
-      if (target instanceof Element && target.closest('.music-player__btn')) return
-      start()
+    const arm = () => {
+      void whenPagesReady().then(start)
     }
 
-    window.addEventListener('pointerdown', onGesture)
-    const onPlaying = () => window.removeEventListener('pointerdown', onGesture)
-    audio.addEventListener('playing', onPlaying)
+    if (document.readyState === 'complete') arm()
+    else window.addEventListener('load', arm, { once: true })
 
     return () => {
-      window.removeEventListener('load', start)
-      window.removeEventListener('pointerdown', onGesture)
-      audio.removeEventListener('playing', onPlaying)
+      cancelled = true
+      window.removeEventListener('load', arm)
     }
   }, [])
 
@@ -50,6 +84,7 @@ export default function MusicPlayer() {
     }
 
     try {
+      if (!audio.getAttribute('src')) audio.src = WEDDING_MUSIC
       await audio.play()
     } catch {
       setIsPlaying(false)
