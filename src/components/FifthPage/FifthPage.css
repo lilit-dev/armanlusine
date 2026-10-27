@@ -68,7 +68,7 @@
   }
 
   50% {
-    transform: translate(-50%, -50%) translateY(-7px);
+    transform: translate(-50%, -50%) translateY(-3px);
   }
 }
 
@@ -79,7 +79,7 @@
   }
 
   50% {
-    transform: translateY(-5px) rotate(-0.6deg);
+    transform: translateY(-2px) rotate(-0.25deg);
   }
 }
 
@@ -90,7 +90,7 @@
   }
 
   50% {
-    transform: translateY(6px) rotate(0.5deg);
+    transform: translateY(2px) rotate(0.25deg);
   }
 }
 

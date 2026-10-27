@@ -120,7 +120,7 @@
   height: 100%;
   max-width: none;
   object-fit: contain;
-  animation: wedding-heart-pulse 2.2s ease-in-out infinite;
+  animation: wedding-heart-pulse 3.2s ease-in-out infinite;
   transform-origin: center center;
 }
 
@@ -131,7 +131,7 @@
   }
 
   50% {
-    transform: scale(1.12);
+    transform: scale(1.05);
   }
 }
 
