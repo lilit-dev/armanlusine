@@ -1,22 +1,34 @@
 import './FifthPage.css'
 
-const CENTER_IMAGE = encodeURI('/images/hraviratoms8.12.webp')
-const LEFT_IMAGE = encodeURI('/images/hraviratoms8.11 (2).webp')
-const RIGHT_IMAGE = encodeURI('/images/hraviratoms8.5.webp')
+const CENTER_IMAGE = '/images/gagik-tamarik-4.webp'
+const LEFT_IMAGE = '/images/gagik-tamarik-3.webp'
+const RIGHT_IMAGE = '/images/gagik-tamarik-2.webp'
 
 const PROGRAM = [
   {
+    icon: '/svg/pesa.png?v=3',
+    title: 'ՓԵՍԱՅԻ ՏՈՒՆ',
+    time: '11:00',
+    hasLine: true,
+  },
+  {
+    icon: '/svg/hars.png?v=2',
+    title: 'ՀԱՐՍԻ ՏՈՒՆ',
+    time: '13:00',
+    hasLine: true,
+  },
+  {
     icon: '/svg/ring1.svg',
     title: 'ՊՍԱԿԱԴՐՈՒԹՅՈՒՆ',
-    location: 'Սուրբ Գայանե եկեղեցի',
-    time: '14:30',
+    location: 'Կեչառիս վանական համալիր',
+    time: '15:00',
     hasLine: true,
   },
   {
     icon: '/svg/cup5clean.svg',
     title: 'ՀԱՐՍԱՆՅԱՑ ՀԱՆԴԻՍՈՒԹՅՈՒՆ',
-    location: 'Nor Dvin',
-    time: '17:00',
+    location: 'Palais Wedding Hall',
+    time: '17:30',
     hasLine: false,
   },
 ]
@@ -28,17 +40,17 @@ export default function FifthPage() {
         <img
           className="fifth-page__photo fifth-page__photo--center"
           src={CENTER_IMAGE}
-          alt="Arman և Lusine"
+          alt="Գագիկ և Թամարա"
         />
         <img
           className="fifth-page__photo fifth-page__photo--left"
           src={LEFT_IMAGE}
-          alt="Arman և Lusine"
+          alt="Գագիկ և Թամարա"
         />
         <img
           className="fifth-page__photo fifth-page__photo--right"
           src={RIGHT_IMAGE}
-          alt="Arman և Lusine"
+          alt="Գագիկ և Թամարա"
         />
       </div>
 
@@ -53,7 +65,9 @@ export default function FifthPage() {
             </div>
             <div className="fifth-page__event-info">
               <h3 className="fifth-page__event-title">{event.title}</h3>
-              <p className="fifth-page__event-location">{event.location}</p>
+              {event.location && (
+                <p className="fifth-page__event-location">{event.location}</p>
+              )}
               <p className="fifth-page__event-time">{event.time}</p>
             </div>
           </article>

@@ -20,7 +20,7 @@
   margin: 0 0 var(--space-lg);
   width: 100%;
   max-width: 340px;
-  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-family: 'ArmenianDecorativeU-Italic', 'Noto Serif Armenian', Georgia, serif;
   font-size: var(--heading-font-size);
   font-weight: 600;
   font-style: italic;
@@ -33,7 +33,7 @@
   margin: 0 auto var(--space-lg);
   width: 100%;
   max-width: 340px;
-  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-family: 'ArmenianDecorativeU-Italic', 'Noto Serif Armenian', Georgia, serif;
   font-size: var(--text-font-size);
   font-weight: 400;
   font-style: italic;
@@ -54,8 +54,9 @@
 
 .fourth-page__divider-img {
   display: block;
-  width: min(120px, 34vw);
-  height: auto;
+  width: auto;
+  height: 118px;
+  max-width: min(150px, 42vw);
   object-fit: contain;
 }
 
@@ -66,7 +67,7 @@
 
 .fourth-page__month {
   margin: 0 0 var(--space-lg);
-  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-family: 'ArmenianDecorativeU-Italic', 'Noto Serif Armenian', Georgia, serif;
   font-size: var(--heading-font-size);
   font-weight: 600;
   font-style: italic;
@@ -81,7 +82,7 @@
 }
 
 .fourth-page__weekday {
-  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-family: 'ArmenianDecorativeU-Italic', 'Noto Serif Armenian', Georgia, serif;
   font-size: var(--text-font-size);
   font-weight: 400;
 }
@@ -93,7 +94,7 @@
 }
 
 .fourth-page__day {
-  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-family: 'ArmenianDecorativeU-Italic', 'Noto Serif Armenian', Georgia, serif;
   font-size: var(--text-font-size);
   font-weight: 400;
   line-height: 1.6;

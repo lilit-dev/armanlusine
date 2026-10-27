@@ -29,7 +29,6 @@
   object-position: center;
   border-radius: 4px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  filter: grayscale(100%);
 }
 
 .fifth-page__photo--center {
@@ -111,7 +110,7 @@
   position: relative;
   z-index: 2;
   margin: 0 0 var(--space-xl);
-  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-family: 'ArmenianDecorativeU-Italic', 'Noto Serif Armenian', Georgia, serif;
   font-size: var(--heading-font-size);
   font-weight: 600;
   font-style: italic;
@@ -170,7 +169,7 @@
 
 .fifth-page__event-title {
   margin: 0;
-  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-family: 'ArmenianDecorativeU-Italic', 'Noto Serif Armenian', Georgia, serif;
   font-size: var(--text-font-size);
   font-weight: 600;
   font-style: italic;
@@ -180,7 +179,7 @@
 
 .fifth-page__event-location {
   margin: 0;
-  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-family: 'ArmenianDecorativeU-Italic', 'Noto Serif Armenian', Georgia, serif;
   font-size: var(--text-font-size);
   font-weight: 400;
   font-style: italic;
@@ -190,7 +189,7 @@
 
 .fifth-page__event-time {
   margin: 0;
-  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-family: 'ArmenianDecorativeU-Italic', 'Noto Serif Armenian', Georgia, serif;
   font-size: var(--text-font-size);
   font-weight: 400;
   font-style: italic;

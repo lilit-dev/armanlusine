@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-xl);
+  gap: 0;
 }
 
 .sixth-page__location {
@@ -22,13 +22,14 @@
 }
 
 .sixth-page__location + .sixth-page__location {
-  padding-top: var(--space-xl);
+  margin-top: calc(var(--section-gap) / 2);
+  padding-top: calc(var(--section-gap) / 2);
   border-top: 0.5px solid rgba(42, 42, 42, 0.14);
 }
 
 .sixth-page__title {
   margin: 0 0 var(--space-lg);
-  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-family: 'ArmenianDecorativeU-Italic', 'Noto Serif Armenian', Georgia, serif;
   font-size: var(--heading-font-size);
   font-weight: 600;
   font-style: italic;
@@ -37,10 +38,19 @@
 }
 
 .sixth-page__illustration {
-  width: min(280px, 78vw);
+  display: block;
+  width: auto;
   height: auto;
   object-fit: contain;
   margin: 0 0 var(--space-lg);
+}
+
+.sixth-page__illustration--church {
+  width: min(188px, 52vw);
+}
+
+.sixth-page__illustration--hall {
+  width: min(320px, 88vw);
 }
 
 .sixth-page__map-link {
@@ -56,7 +66,7 @@
   background: #e8e8e8;
   color: #2a2a2a;
   text-decoration: none;
-  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-family: 'ArmenianDecorativeU-Italic', 'Noto Serif Armenian', Georgia, serif;
   font-size: var(--text-font-size);
   font-weight: 400;
   font-style: italic;
@@ -81,7 +91,7 @@
 @media (max-width: 768px) {
   .sixth-page {
     min-height: auto;
-    gap: var(--space-xl);
+    gap: 0;
     justify-content: flex-start;
   }
 
@@ -92,23 +102,19 @@
   }
 
   .sixth-page__location + .sixth-page__location {
-    padding-top: var(--space-xl);
-    margin-top: 0;
+    margin-top: calc(var(--section-gap) / 2);
+    padding-top: calc(var(--section-gap) / 2);
   }
 
   .sixth-page__title {
     margin-bottom: var(--space-lg);
   }
 
-  .sixth-page__illustration {
-    width: min(220px, 62vw);
-    max-height: none;
-    margin-bottom: var(--space-lg);
+  .sixth-page__illustration--church {
+    width: min(168px, 48vw);
   }
-}
 
-@media (max-width: 375px) {
-  .sixth-page__illustration {
-    width: min(200px, 58vw);
+  .sixth-page__illustration--hall {
+    width: min(300px, 84vw);
   }
 }

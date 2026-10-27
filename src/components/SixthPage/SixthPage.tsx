@@ -3,14 +3,18 @@ import './SixthPage.css'
 
 const LOCATIONS = [
   {
-    title: 'Սուրբ Գայանե եկեղեցի',
-    image: '/svg/ejmiacin.svg',
-    mapUrl: 'https://www.google.com/maps/search/Surb+Gayane+Church+Yerevan',
+    title: 'Կեչառիս վանական համալիր',
+    kind: 'church',
+    image: '/svg/kecharis.png',
+    mapUrl:
+      'https://www.google.com/maps/search/?api=1&query=Kecharis+Monastery,+Tsaghkadzor,+Armenia',
   },
   {
-    title: 'Nor Dvin',
-    image: '/svg/nordvin.svg',
-    mapUrl: 'https://www.google.com/maps/search/Nor+Dvin+Armenia',
+    title: 'Palais Wedding Hall',
+    kind: 'hall',
+    image: '/svg/srah.png',
+    mapUrl:
+      'https://www.google.com/maps/search/?api=1&query=Palais+Wedding+Hall,+Kamoyi+3,+Hrazdan,+Armenia',
   },
 ]
 
@@ -22,7 +26,7 @@ export default function SixthPage() {
           <h2 className="sixth-page__title">{location.title}</h2>
 
           <img
-            className="sixth-page__illustration"
+            className={`sixth-page__illustration sixth-page__illustration--${location.kind}`}
             src={location.image}
             alt={location.title}
           />

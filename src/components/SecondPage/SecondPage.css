@@ -27,7 +27,7 @@
 
 .second-page__title {
   margin: 0 0 var(--space-lg);
-  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-family: 'ArmenianDecorativeU-Italic', 'Noto Serif Armenian', Georgia, serif;
   font-size: var(--heading-font-size);
   font-weight: 600;
   font-style: italic;
@@ -59,7 +59,7 @@
 }
 
 .second-page__timer-value {
-  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-family: 'ArmenianDecorativeU-Italic', 'Noto Serif Armenian', Georgia, serif;
   font-size: clamp(1.75rem, 8vw, 2.25rem);
   font-weight: 400;
   font-style: italic;
@@ -68,7 +68,7 @@
 }
 
 .second-page__timer-label {
-  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-family: 'ArmenianDecorativeU-Italic', 'Noto Serif Armenian', Georgia, serif;
   font-size: var(--text-font-size);
   font-weight: 400;
   font-style: italic;
@@ -93,13 +93,12 @@
   object-fit: cover;
   object-position: center;
   border-radius: 4px;
-  filter: grayscale(100%);
   margin: 0;
 }
 
 .second-page__quote {
   margin: 0;
-  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-family: 'ArmenianDecorativeU-Italic', 'Noto Serif Armenian', Georgia, serif;
   font-size: var(--text-font-size);
   font-weight: 400;
   font-style: italic;
@@ -109,7 +108,7 @@
 
 .second-page__reference {
   margin: 0;
-  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-family: 'ArmenianDecorativeU-Italic', 'Noto Serif Armenian', Georgia, serif;
   font-size: var(--text-font-size);
   font-weight: 400;
   font-style: italic;

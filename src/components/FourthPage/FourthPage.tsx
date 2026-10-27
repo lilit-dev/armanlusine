@@ -8,9 +8,9 @@ const WEEKDAYS = ['Երկ', 'Երբ', 'Չրք', 'Հնգ', 'Ուրբ', 'Շբթ', 
 
 const YEAR = 2026
 
-const MONTH = 7 // August (0-indexed)
+const MONTH = 10 // November (0-indexed)
 
-const WEDDING_DAY = 16
+const WEDDING_DAY = 11
 
 
 
@@ -68,9 +68,7 @@ export default function FourthPage() {
 
       <p className="fourth-page__text">
 
-        Սիրով հրավիրում ենք Ձեզ մեր կյանքի կարևորագույն և հիշարժան օրը մեզ հետ կիսելու,
-
-        և ուրախ կլինենք եթե այս երջանիկ օրը անցկացնեք մեզ հետ նվիրելով Ձեր ներկայությամբ:
+        Մենք ցանկանում ենք Ձեզ հետ կիսել մեր կյանքի ամենակարևոր օրերից մեկը և մեծ սիրով հրավիրում ենք Ձեզ մեր հարսանիքին։
 
       </p>
 
@@ -82,7 +80,7 @@ export default function FourthPage() {
 
           className="fourth-page__divider-img"
 
-          src="/svg/vznoc.svg"
+          src="/svg/bajakner.png?v=3"
 
           alt=""
 
@@ -94,7 +92,7 @@ export default function FourthPage() {
 
       <div className="fourth-page__calendar">
 
-        <h3 className="fourth-page__month">Օգոստոս</h3>
+        <h3 className="fourth-page__month">Նոյեմբեր</h3>
 
 
 
@@ -136,7 +134,7 @@ export default function FourthPage() {
 
                   />
 
-                  <span className="fourth-page__day-number">16</span>
+                  <span className="fourth-page__day-number">{WEDDING_DAY}</span>
 
                 </span>
 

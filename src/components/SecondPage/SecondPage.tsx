@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import './SecondPage.css'
 
-const WEDDING_DATE = new Date('2026-08-16T12:00:00')
-const QUOTE_IMAGE = encodeURI('/images/hraviratoms 8.1.webp')
+const WEDDING_DATE = new Date('2026-11-11T12:00:00')
+const QUOTE_IMAGE = '/images/dzerqer.webp'
 
 type TimeLeft = {
   days: number
@@ -65,7 +65,7 @@ export default function SecondPage() {
         <img
           className="second-page__card-image"
           src={QUOTE_IMAGE}
-          alt="Մատանին"
+          alt="Մատանիներ"
         />
         <p className="second-page__quote">
           Սերը հանդուրժող է,

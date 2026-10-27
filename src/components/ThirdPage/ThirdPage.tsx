@@ -1,19 +1,12 @@
 import './ThirdPage.css'
 
-const PHOTOS = [
-  encodeURI('/images/hraviratoms8.10.webp'),
-  encodeURI('/images/hraviratoms8.11 (2).webp'),
-]
+const PHOTOS = ['/images/gagik-tamarik-2.webp', '/images/gagik-tamarik-3.webp']
 
 export default function ThirdPage() {
   return (
     <section className="third-page">
       <div className="third-page__text-col">
-        <div className="third-page__save-date">
-          <span className="third-page__serif">SAVE</span>
-          <span className="third-page__script">the</span>
-          <span className="third-page__serif">DATE</span>
-        </div>
+        <img className="third-page__phrase" src="/images/ser-liqy-ser.png" alt="ՍԵՐ լիքը ՍԵՐ" />
       </div>
 
       <div className="third-page__photos-col">
@@ -24,7 +17,7 @@ export default function ThirdPage() {
               index === 0 ? ' third-page__photo--first' : ' third-page__photo--second'
             }`}
             src={src}
-            alt={`Arman և Lusine ${index + 1}`}
+            alt={`Գագիկ և Թամարա ${index + 1}`}
           />
         ))}
       </div>

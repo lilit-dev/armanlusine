@@ -6,6 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: var(--space-xl);
   background: #e8e8e8;
   color: #2a2a2a;
   padding: calc(var(--page-padding-top) + env(safe-area-inset-top, 0px))
@@ -18,108 +19,58 @@
 
 .seventh-page__header {
   width: 100%;
-  max-width: 340px;
+  max-width: 360px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-lg);
-  margin-bottom: var(--space-xl);
+  gap: var(--space-md);
 }
 
 .seventh-page__title {
   margin: 0;
   width: 100%;
-  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-family: 'ArmenianDecorativeU-Italic', 'Noto Serif Armenian', Georgia, serif;
   font-size: var(--heading-font-size);
   font-weight: 600;
   font-style: italic;
-  line-height: 1.3;
-  letter-spacing: 0.04em;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
   text-wrap: balance;
-}
-
-.seventh-page__ornament {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.65rem;
-}
-
-.seventh-page__dot {
-  width: 2px;
-  height: 2px;
-  border-radius: 50%;
-  background: #2a2a2a;
-  opacity: 0.55;
-}
-
-.seventh-page__heart {
-  display: block;
-  object-fit: contain;
-}
-
-.seventh-page__heart--sm {
-  width: 18px;
-  height: 18px;
-  opacity: 0.72;
-}
-
-.seventh-page__heart--lg {
-  width: 30px;
-  height: 30px;
-  opacity: 0.88;
-}
-
-.seventh-page__photo {
-  display: block;
-  width: min(280px, 78vw);
-  max-width: 340px;
-  aspect-ratio: 4 / 5;
-  max-height: 34dvh;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 4px;
-  filter: grayscale(100%);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  margin: 0 auto var(--space-xl);
-}
-
-.seventh-page__divider {
-  display: flex;
-  justify-content: center;
-  margin: 0 0 var(--space-xl);
-  line-height: 0;
-}
-
-.seventh-page__divider-img {
-  display: block;
-  width: min(120px, 34vw);
-  height: auto;
-  object-fit: contain;
 }
 
 .seventh-page__card {
   width: 100%;
-  max-width: 340px;
+  max-width: 360px;
   background: #ffffff;
-  border-radius: 16px;
-  padding: var(--card-padding);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 22px;
+  padding: 0.7rem 0.7rem 1.15rem;
+  box-shadow: 0 10px 32px rgba(42, 42, 42, 0.08);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--card-gap);
-  margin-bottom: var(--space-xl);
+  gap: 1rem;
+}
+
+.seventh-page__photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 16px;
+  margin: 0;
 }
 
 .seventh-page__text {
   margin: 0;
   width: 100%;
-  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  padding: 0 0.45rem;
+  font-family: 'ArmenianDecorativeU-Italic', 'Noto Serif Armenian', Georgia, serif;
   font-size: var(--text-font-size);
   font-weight: 400;
   font-style: italic;
-  line-height: 1.65;
+  line-height: 1.6;
   color: #2a2a2a;
   hyphens: none;
   word-break: normal;
@@ -131,156 +82,84 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.45rem;
-  width: 100%;
+  gap: 0.5rem;
+  width: calc(100% - 0.5rem);
+  margin: 0 0.25rem;
   padding: 0.85rem 1.35rem;
   border-radius: 999px;
-  background: #e8e8e8;
-  color: #2a2a2a;
+  background: #2a2a2a;
+  color: #f7f7f7;
   text-decoration: none;
-  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
+  font-family: 'ArmenianDecorativeU-Italic', 'Noto Serif Armenian', Georgia, serif;
   font-size: var(--text-font-size);
-  font-weight: 400;
+  font-weight: 500;
   font-style: italic;
+  letter-spacing: 0.04em;
   transition: background 0.2s;
-  min-height: 44px;
+  min-height: 46px;
   -webkit-tap-highlight-color: transparent;
 }
 
 .seventh-page__join-btn:active {
-  background: #dcdcdc;
-}
-
-.seventh-page__contacts-block {
-  width: 100%;
-  max-width: 340px;
-  margin-bottom: var(--space-xl);
-}
-
-.seventh-page__subtitle {
-  margin: 0 0 var(--space-lg);
-  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
-  font-size: var(--heading-font-size);
-  font-weight: 600;
-  font-style: italic;
-  letter-spacing: 0.06em;
-}
-
-.seventh-page__contacts {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-}
-
-.seventh-page__contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.35rem;
-  width: 100%;
-  min-height: 72px;
-  padding: 0.95rem 1.15rem;
-  border-radius: 999px;
-  background: #ffffff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  text-decoration: none;
-  color: #2a2a2a;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.seventh-page__contact-name {
-  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
-  font-size: var(--text-font-size);
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  font-style: italic;
-  opacity: 0.85;
-}
-
-.seventh-page__contact-phone {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  font-family: 'Noto Serif Armenian', 'Cormorant Garamond', Georgia, serif;
-  font-size: var(--text-font-size);
-  font-weight: 400;
-  font-style: italic;
-  line-height: 1.65;
+  background: #1a1a1a;
 }
 
 .seventh-page__closing-wrap {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: var(--space-lg);
   width: 100%;
-  max-width: 340px;
-  padding-top: var(--space-sm);
-}
-
-.seventh-page__closing-heart {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-  opacity: 0.75;
+  max-width: 360px;
+  padding-top: 0.35rem;
 }
 
 .seventh-page__closing {
+  position: relative;
   margin: 0;
-  font-family: 'Cormorant Garamond', 'Noto Serif Armenian', Georgia, serif;
-  font-size: var(--heading-font-size);
-  font-weight: 600;
+  padding: 0.85rem 0 0.7rem;
+  font-family: 'ArmAllegrou', serif;
+  font-size: clamp(1.35rem, 5.6vw, 1.75rem);
+  font-weight: 400;
   font-style: normal;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
   text-align: center;
-  letter-spacing: 0.05em;
+  color: #2a2a2a;
+}
+
+.seventh-page__closing::before,
+.seventh-page__closing::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  height: 1px;
+  background: rgba(42, 42, 42, 0.45);
+  transform: translateX(-50%);
+}
+
+.seventh-page__closing::before {
+  top: 0;
+  width: 4.75rem;
+}
+
+.seventh-page__closing::after {
+  bottom: 0;
+  width: 1.6rem;
 }
 
 @media (max-width: 768px) {
   .seventh-page {
     justify-content: flex-start;
-  }
-
-  .seventh-page__header {
-    margin-bottom: var(--space-lg);
-  }
-
-  .seventh-page__photo {
-    max-height: 30dvh;
-    margin-bottom: var(--space-lg);
-  }
-
-  .seventh-page__divider {
-    margin-bottom: var(--space-lg);
-  }
-
-  .seventh-page__card {
-    margin-bottom: var(--space-lg);
-  }
-
-  .seventh-page__text {
-    line-height: 1.6;
+    gap: var(--space-lg);
   }
 
   .seventh-page__join-btn {
-    padding: 0.7rem 1rem;
-    min-height: 40px;
+    padding: 0.75rem 1rem;
+    min-height: 44px;
   }
-
-  .seventh-page__contacts-block {
-    margin-bottom: var(--space-lg);
-  }
-
-  .seventh-page__contact {
-    min-height: 64px;
-    padding: 0.8rem 1rem;
-  }
-
 }
 
 @media (hover: hover) {
   .seventh-page__join-btn:hover {
-    background: #dcdcdc;
+    background: #3d3d3d;
   }
 }

@@ -1,7 +1,6 @@
 import './Footer.css'
 
-const INSTAGRAM_URL =
-  'https://www.instagram.com/iventa.wedding?igsh=cWNnaWNnNmZvMnU2'
+const INSTAGRAM_URL = 'https://www.instagram.com/shogha_photostudio/'
 
 export default function Footer() {
   return (
@@ -14,7 +13,7 @@ export default function Footer() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Instagram — IVenta Wedding
+        Instagram — Shogha Photostudio
       </a>
     </footer>
   )

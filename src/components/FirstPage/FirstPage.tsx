@@ -1,40 +1,32 @@
 import { type CSSProperties } from 'react'
-
 import './FirstPage.css'
 
-
-
-const COUPLE_IMAGE = encodeURI('/images/hraviratoms 8.webp')
-
-
+const COVER_IMAGE = '/images/gagik-tamarik-1.webp'
 
 export default function FirstPage() {
 
   return (
 
     <section
-
       className="first-page"
-
-      style={{ '--bg-image': `url("${COUPLE_IMAGE}")` } as CSSProperties}
-
+      style={{ '--bg-image': `url("${COVER_IMAGE}")` } as CSSProperties}
     >
 
       <header className="first-page__header">
 
-        <p className="first-page__label">Wedding Day</p>
+        <p className="first-page__label">Հարսանյաց հրավեր</p>
 
         <h1 className="first-page__names">
 
-          <span className="first-page__name">Arman</span>
+          <span className="first-page__name">Գագիկ</span>
 
-          <span className="first-page__amp">&amp;</span>
+          <span className="first-page__amp">և</span>
 
-          <span className="first-page__name">Lusine</span>
+          <span className="first-page__name">Թամարա</span>
 
         </h1>
 
-        <p className="first-page__date">16.08.2026</p>
+        <p className="first-page__date">11.11.2026</p>
 
       </header>
 

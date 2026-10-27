@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 import { Music, VolumeX } from '../../icons'
 import './MusicPlayer.css'
 
-const WEDDING_MUSIC = encodeURI('/audio/Sirusho_-_Sirt_(www.mexedi.am) (1).mp3')
+const WEDDING_MUSIC = '/audio/ordinary-wedding.mp3'
 
 export default function MusicPlayer() {
   const audioRef = useRef<HTMLAudioElement>(null)
